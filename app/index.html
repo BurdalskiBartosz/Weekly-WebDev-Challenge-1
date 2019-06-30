@@ -6,12 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewProject</title>
-    <link rel="stylesheet" href="/css/main.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <p>Hello My New Project!</p>
+    <header class="header">
+        <img class="header__logo logo" src="./assets/logo_top.png" alt="">
+    </header>
+    <div class="container">
+        <div class="wrapper wrapper--register-form">
+            <h2 class="wrapper__title">Register Form</h2>
+            <form class="form">
+                <div class="form__items">
+                    <i class="form__icon fas fa-user"></i>
+                    <input class="form__item" type="text" placeholder="Username">
+                </div>
+                <div class="form__items">
+                    <i class="form__icon  fas fa-lock"></i>
+                    <input class="form__item" type="password" placeholder="Password">
+                </div>
+                <div class="form__items">
+                    <i class="form__icon  fas fa-lock"></i>
+                    <input class="form__item" type="password" placeholder="Confirm Password">
+                </div>
+                <div class="form__items">
+                    <i class="form__icon  fas fa-envelope"></i> <input class="form__item" type="email"
+                        placeholder="Email">
+                </div>
+                <div class="form__items">
+                    <i class="form__icon  fas fa-map-marker-alt"></i>
+                    <select class="form__item form__item--select" required>
+                        <option value="" disabled selected hidden>Your Location</option>
+                        <option class="form__item--option" value="Warsaw">Warszawa</option>
+                        <option class="form__item--option" value="Wroclaw">Wrocław</option>
+                        <option class="form__item--option" value="Cracow">Kraków</option>
+                    </select>
+                </div>
+                <input class="label__input" type="checkbox" name="accept_register-form" id="accept_register-form">
+                <label class="form__label" for="accept_register-form">I have read and
+                    accept the terms of
+                    use.</label>
+                <button class="form__btn">Sign up</button>
+            </form>
+        </div>
+        <div class="wrapper wrapper--send-email">
+            <h2 class="wrapper__title">Send Email</h2>
+            <form class="form">
+                <div class="form__items">
+                    <i class="form__icon fas fa-user"></i>
+                    <input class="form__item" type="text" placeholder="Your Name">
+                </div>
+                <div class="form__items">
+                    <i class="form__icon  fas fa-envelope"></i> <input class="form__item" type="email"
+                        placeholder="Your Email">
+                </div>
+                <div class="form__items">
+                    <textarea class="form__item form__item--textarea" name="text" rows="8"
+                        placeholder="Type your message"></textarea>
+                </div>
+                <input class="label__input" type="checkbox" name="accept_send-mail" id="accept_send-mail">
+                <label class="form__label" for="accept_send-mail">Send a copy to my Email</label>
+                <button class="form__btn">Send Email</button>
+            </form>
+        </div>
+        <div class="wrapper wrapper--sign-in-form">
+            <h2 class="wrapper__title">Sign In Form</h2>
+            <form class="form">
+                <div class="form__items">
+                    <i class="form__icon fas fa-user"></i>
+                    <input class="form__item" type="text" placeholder="Username">
+                </div>
+                <div class="form__items">
+                    <i class="form__icon  fas fa-lock"></i> <input class="form__item" type="password"
+                        placeholder="Password">
+                </div>
+                <input class="label__input" type="checkbox" name="accept_sign-in-form" id="accept_sign-in-form">
+                <label class="form__label" for="accept_sign-in-form">Remember me</label>
+                <button class="form__btn form__btn--little-btn form__btn--right-btn">Sign in</button>
+            </form>
+        </div>
+        <div class="wrapper wrapper--recover-form">
+            <h2 class="wrapper__title">Recover Form</h2>
+            <form class="form">
+                <div class="form__items">
+                    <i class="form__icon fas fa-envelope"></i>
+                    <input class="form__item" type="text" placeholder="Enter your Email">
+                </div>
+                <div class="form__items">
+                    <i class="form__icon fas fa-mobile-alt"></i> <input class="form__item" type="number"
+                        placeholder="Enter your Phone number">
+                </div>
+                <button class="form__btn form__btn--little-btn ">Send</button>
+                <button class="form__btn form__btn--little-btn form__btn--right-btn form__btn--done-btn">Done</button>
+            </form>
+        </div>
+        <div class="wrapper wrapper--subscribe-form">
+            <h2 class="wrapper__title">Subscribe Form</h2>
+            <form class="form">
+                <div class="form__items">
+                    <i class="form__icon fas fa-envelope"></i>
+                    <input class="form__item" type="text" placeholder="Enter your Email">
+                </div>
+                <button class="form__btn form__btn--little-btn ">Subscribe</button>
+                <button
+                    class="form__btn form__btn--little-btn form__btn--right-btn form__btn--red-btn">No,Thanks</button>
+            </form>
+        </div>
+        <footer class="footer">
+            <img class="footer__logo logo" src="./assets/logo_bottom.png" alt="">
+        </footer>
+    </div>
     <script src="/js/app.js"></script>
 </body>
 

@@ -1,12 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
-    font-size: 20px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: black;
-    p{
-        color: yellow;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        font-size: 3rem;
-    }    
+    background: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1290px;
+    margin: 0 auto;
+}
+.wrapper{
+    max-width: 580px
+}
+.header{
+    text-align: center;
+}
+.logo{
+    width: 100%;
+    opacity: .6;
+    max-width: 580px;
+}
+.wrapper__title{
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form{ 
+    background-color: rgb(244, 244, 244);
+    background-clip: padding-box;
+    border: 20px solid rgba(0, 0, 0, 0.356);
+    padding: 10px;
+    &__items{
+        display: flex;
+        background-color: rgb(246, 246, 246);
+        font-size: 1.5rem;
+        color: rgb(222, 222, 222);
+        border: 1px solid rgb(198, 198, 198);  
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    &__icon{
+        position: relative;
+        width: 35px;
+        margin-left: 5px;
+        padding: 5px;  
+        text-align: center;
+        &::after{
+            content: '';
+            position: absolute;
+            right: -5px;
+            border: 1px solid rgb(222, 222, 222);
+            height: 70%;
+        }
+    }
+    &__item{
+        flex-grow:1;
+        background-color: rgb(246, 246, 246);
+        font-size: .9rem;
+        padding: 10px;
+        margin-left: 10px;
+        border:none;
+        &--select:required:invalid{
+            color: gray;   
+        }
+        &--option{
+            color: black;
+        }
+        &--textarea{
+            resize: none;
+            margin-left: 0;       
+        }
+    }
+    &__btn{
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        width: 100%; 
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgb(147, 208, 43);
+        &--little-btn{
+            display: inline-block;
+            width: 45%;
+            font-size: 1rem;
+            padding: 5px;
+        }
+        &--right-btn{
+            float: right;
+        }
+        &--done-btn{
+            background-color: rgb(176, 211, 116);
+        }
+        &--red-btn{
+            background-color: rgb(255, 124, 124);
+        }
+    }
+}
+.label__input{
+    display: none;
+    &:not(:checked) + .form__label:after {
+        opacity: 0;
+      }
+    &:checked + .form__label:after {
+      opacity: 1;
+    }
+}
+.form__label {
+    display: inline-block;
+    position: relative;
+    color: #afafaf;
+    font-weight: 300;
+    font-size: 13.5px;
+    margin: 10px 0 ;
+    padding-left: 2rem;
+    cursor: pointer;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #c6c6c6;
+        border-radius: 3px;
+        background: #f6f6f6;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 14px;
+      height: 14px;
+      background: linear-gradient(#a3d840, #7ec31f);
+      border-radius: 3px;
+    }
+}
+@media (min-width:900px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4,260px)
+    }
+    .wrapper--register-form{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .wrapper--send-email{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .wrapper--sign-in-form{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .wrapper--recover-form{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .wrapper--subscribe-form{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .footer{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+}
+

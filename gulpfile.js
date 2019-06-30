@@ -35,7 +35,7 @@ gulp.task('scripts', function () {
 
 gulp.task('sass', function () {
     return gulp
-        .src('./app/scss/main.scss')
+        .src('./app/scss/style.scss')
         .pipe(sourcemaps.init())
         .pipe(plumber(() => { notify.onError('\n\n❌  ===> SASS ERROR %>\n') }))
         .pipe(sass().on('error', sass.logError))
